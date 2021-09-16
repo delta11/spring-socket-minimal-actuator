@@ -17,8 +17,10 @@ class WebSocketMetricsService(meterRegistry: MeterRegistry) {
 
     init {
         Gauge.builder("websocket.activeConnections") { activeConnectionsGauge.toDouble() }
+            .description("Total amount of currently open connections")
             .register(meterRegistry)
         Gauge.builder("websocket.uniqueUserConnections") { currentlyConnectedUsers.size.toDouble() }
+            .description("Total amount of currently open connections which belong to different users based on Spring Security Context Principal")
             .register(meterRegistry)
     }
 

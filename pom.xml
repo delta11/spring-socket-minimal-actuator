@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring-socket-minimal-actuator</artifactId>
-    <groupId>me.thomasvanputten</groupId>
+    <groupId>io.github.delta11</groupId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <developers>

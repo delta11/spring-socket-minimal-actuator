@@ -10,6 +10,9 @@ import org.springframework.web.socket.messaging.SessionConnectEvent
 import org.springframework.web.socket.messaging.SessionDisconnectEvent
 import java.util.concurrent.atomic.AtomicInteger
 
+/**
+ * @author Thomas van Putten
+ */
 class WebSocketMetricsService(meterRegistry: MeterRegistry) {
     private val activeConnectionsGauge = AtomicInteger(0)
     private val currentlyConnectedUsersMutex = Mutex()

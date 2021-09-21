@@ -1,4 +1,4 @@
-package me.thomasvanputten.spring.socket.actuator
+package io.github.delta11.spring.socket.actuator
 
 import io.micrometer.core.instrument.MeterRegistry
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty

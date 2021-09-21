@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-me.thomasvanputten.spring.socket.actuator.WebSocketActuatorAutoConfiguration
+io.github.delta11.spring.socket.actuator.WebSocketActuatorAutoConfiguration

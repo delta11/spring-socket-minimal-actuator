@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Lazy
+import org.springframework.messaging.simp.user.SimpUserRegistry
 
 /**
  * @author Thomas van Putten
@@ -14,5 +15,6 @@ open class WebSocketActuatorAutoConfiguration {
     @Bean
     @Lazy(false)
     @ConditionalOnProperty(value = ["management.metrics.export.socket"], havingValue = "true", matchIfMissing = true)
-    open fun webSocketMetricsService(meterRegistry: MeterRegistry) = WebSocketMetricsService(meterRegistry)
+    open fun webSocketMetricsService(meterRegistry: MeterRegistry, simpUserRegistry: SimpUserRegistry) =
+        WebSocketMetricsService(meterRegistry, simpUserRegistry)
 }

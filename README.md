@@ -14,7 +14,4 @@ a `io.micrometer.core.instrument.MeterRegistry` and you should be in business.
 
 ## Metrics
 
-This library just exposes 2 metrics
-
-* `websocket.activeConnections` Total amount of currently open connections
-* `websocket.uniqueUserConnections` Total amount of currently open connections which belong to different users based on Spring Security Context Principal
+This library just exposes 1 metrics `websocket.userCount` The count of all connected users
